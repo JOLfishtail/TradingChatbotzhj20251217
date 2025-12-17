@@ -1,0 +1,104 @@
+# ==============================================
+# Trading Chatbot - 生产环境依赖
+# Python 3.11.8 专用版本
+# ==============================================
+
+# ============ LLM & AI框架 ============
+langchain==0.1.0
+langchain-core==0.1.7
+langchain-community==0.0.10
+langgraph==0.0.11
+
+# OpenAI相关
+openai==1.3.0
+tiktoken==0.5.1
+
+# 可选备用LLM（保留选项）
+# anthropic==0.7.2  # Claude API
+# cohere==4.39  # Cohere API
+
+# ============ 向量数据库 & 嵌入 ============
+chromadb==0.4.22
+sentence-transformers==2.2.2
+# 或者使用OpenAI嵌入，上面已包含
+
+# ============ Web框架 & API ============
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+pydantic==2.5.0
+pydantic-settings==2.1.0  # 增强配置管理
+python-multipart==0.0.6  # 文件上传支持
+
+# ============ 数据处理 ============
+pandas==2.1.3
+numpy==1.24.3
+python-dateutil==2.8.2
+
+# ============ 文档处理 ============
+PyPDF2==3.0.1
+python-docx==1.1.0
+markdown==3.5.1
+beautifulsoup4==4.12.2  # HTML解析
+lxml==4.9.3  # XML处理
+
+# ============ 数据库连接 ============
+sqlalchemy==2.0.23
+psycopg2-binary==2.9.9  # PostgreSQL连接
+redis==5.0.1  # Redis缓存
+
+# ============ 异步 & 网络 ============
+aiohttp==3.8.5
+httpx==0.25.2  # 异步HTTP客户端
+websockets==12.0  # WebSocket支持
+asyncio==3.4.3
+
+# ============ 监控 & 日志 ============
+# Langfuse集成
+langfuse==2.7.0
+
+# 监控和追踪
+opentelemetry-api==1.22.0
+opentelemetry-sdk==1.22.0
+prometheus-client==0.19.0
+
+# 结构化日志
+python-json-logger==2.0.7
+structlog==23.2.0
+
+# ============ 配置 & 环境 ============
+python-dotenv==1.0.0
+pyyaml==6.0.1
+
+# ============ 安全 & 验证 ============
+python-jose==3.3.0  # JWT令牌
+passlib==1.7.4  # 密码哈希
+cryptography==41.0.7  # 加密
+email-validator==2.1.0  # 邮箱验证
+
+# ============ 工具类 ============
+typing-extensions==4.9.0  # 类型提示扩展
+python-rapidjson==1.13  # 快速JSON解析
+orjson==3.9.10  # 备选JSON解析器
+colorama==0.4.6  # 终端颜色
+tqdm==4.66.1  # 进度条
+tenacity==8.2.3  # 重试逻辑
+
+# ============ 测试 & 质量保证 ============
+# 注：生产环境通常不安装测试依赖，但保留在文件中
+pytest==7.4.3
+pytest-asyncio==0.21.1
+pytest-cov==4.1.0
+pytest-mock==3.12.0
+hypothesis==6.92.2  # 属性测试
+
+# ============ 开发工具 ============
+# 生产环境可选，开发环境必须
+black==23.11.0
+flake8==6.1.0
+mypy==1.7.0
+isort==5.12.0
+pre-commit==3.5.0
+
+# ============ Docker & 容器化 ============
+docker==6.1.3  # Docker SDK
+python-on-whales==0.64.1  # Docker CLI包装器

@@ -1,0 +1,33 @@
+# Docker容器专用 - 最小化且稳定
+# 避免版本冲突，固定主要版本
+
+# AI核心
+langchain==0.1.0
+langchain-core==0.1.0
+langchain-community==0.0.10
+langgraph==0.0.11
+openai==1.3.0
+
+# 向量数据库
+chromadb==0.4.22
+
+# Web服务
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+pydantic==2.5.0
+
+# 数据处理
+pandas==2.1.3
+numpy==1.24.3
+
+# 监控
+langfuse==2.7.0
+
+# 工具类
+python-dotenv==1.0.0
+python-multipart==0.0.6
+aiohttp==3.8.5
+
+# 数据库
+sqlalchemy==2.0.23
+redis==5.0.1
